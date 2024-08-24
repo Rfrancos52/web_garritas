@@ -2149,7 +2149,7 @@ input, select, textarea {
 #nav > ul > li > a {
     border-radius: 6px;
     color: #ffffff;
-    background: #4c6baf; /* Color verde fresco */
+    background: #4A90E2; /* Azul Claro (Principal) */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
     font-size: 16px; /* Tamaño de fuente más grande */
     text-decoration: none;
@@ -2159,18 +2159,18 @@ input, select, textarea {
 }
 
 #nav > ul > li:hover > a, #nav > ul > li.active > a {
-    background: #455aa0; /* Color verde más oscuro para hover */
+    background: #357ABD; /* Azul Suave (Hover) */
 }
 
 #nav > ul > li.current > a {
-    background: #004379; /* Color verde más oscuro para el estado activo */
+    background: #003D6B; /* Azul Oscuro (Activo) */
     color: #ffffff !important;
     font-weight: 700;
 }
 
 .dropotron {
     border-radius: 6px;
-    background-color: #ffffff; /* Fondo blanco para el menú desplegable */
+    background-color: #E1F5FE; /* Azul Claro de Fondo del Menú Desplegable */
     padding: 1.5em;
     font-style: normal; /* Cambiar a normal para una apariencia más profesional */
     min-width: 15em; /* Mayor ancho para acomodar más texto */
@@ -2182,7 +2182,7 @@ input, select, textarea {
 }
 
 .dropotron a, .dropotron span {
-    color: #333333; /* Texto oscuro para mejor contraste */
+    color: #6C8EBF; /* Azul Grisáceo (Texto del Menú Desplegable) */
     text-decoration: none;
     transition: color .3s ease; /* Transición suave para color */
 }
@@ -2192,7 +2192,7 @@ input, select, textarea {
 }
 
 .dropotron li:hover > a, .dropotron li:hover > span {
-    color: #003f79; /* Color verde para el texto en hover */
+    color: #0091EA; /* Azul Suave para Hover en el Menú Desplegable */
 }
 
 .dropotron.level-0 {
@@ -2208,7 +2208,7 @@ input, select, textarea {
     top: -9px;
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
-    border-bottom: solid 10px #ffffff; /* Fondo blanco para el triángulo */
+    border-bottom: solid 10px #E1F5FE; /* Azul Claro de Fondo del Menú Desplegable */
 }
 
 /* Banner */
