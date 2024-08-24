@@ -2133,93 +2133,83 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
-		margin: 2.5em 0 0 0;
-	}
+#nav {
+    margin: 2.5em 0 0 0;
+}
 
-		#nav > ul {
-			margin: 0;
-		}
+#nav > ul {
+    margin: 0;
+}
 
-			#nav > ul > li {
-				display: inline-block;
-				margin: 0 0.35em 0 0.35em;
-			}
+#nav > ul > li {
+    display: inline-block;
+    margin: 0 0.5em; /* Mayor espacio entre elementos */
+}
 
-				#nav > ul > li > ul {
-					display: none;
-				}
+#nav > ul > li > a {
+    border-radius: 6px;
+    color: #ffffff;
+    background: #4CAF50; /* Color verde fresco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
+    font-size: 16px; /* Tamaño de fuente más grande */
+    text-decoration: none;
+    padding: 0.8em 1.5em; /* Ajustar padding para mejor legibilidad */
+    transition: background-color .3s ease, color .3s ease; /* Transiciones más suaves */
+    outline: 0;
+}
 
-				#nav > ul > li > a {
-					border-radius: 5px;
-					color: #1ad1e9;
-					font-family:Arial, Helvetica, sans-serif;
-					text-decoration: none;
-					padding: 0.6em 1.2em 0.6em 1.2em;
-					-moz-transition: background-color .25s ease-in-out;
-					-webkit-transition: background-color .25s ease-in-out;
-					-ms-transition: background-color .25s ease-in-out;
-					transition: background-color .25s ease-in-out;
-					outline: 0;
-				}
+#nav > ul > li:hover > a, #nav > ul > li.active > a {
+    background: #45a049; /* Color verde más oscuro para hover */
+}
 
-				#nav > ul > li:hover > a, #nav > ul > li.active > a {
-					background: rgba(194, 202, 193, 0.76);
-				}
+#nav > ul > li.current > a {
+    background: #00796b; /* Color verde más oscuro para el estado activo */
+    color: #ffffff !important;
+    font-weight: 700;
+}
 
-				#nav > ul > li.current > a {
-					background: #1660c2;
-					color: #fff !important;
-					font-weight: 700;
-				}
+.dropotron {
+    border-radius: 6px;
+    background-color: #ffffff; /* Fondo blanco para el menú desplegable */
+    padding: 1.5em;
+    font-style: normal; /* Cambiar a normal para una apariencia más profesional */
+    min-width: 15em; /* Mayor ancho para acomodar más texto */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+    text-align: left;
+    margin-top: -1.25em;
+    margin-left: -1px;
+    list-style: none;
+}
 
-	.dropotron {
-		border-radius: 5px;
-		background-color: #252122;
-		background-color: rgba(34, 30, 31, 0.98);
-		padding: 1.25em 1.5em 1.25em 1.5em;
-		font-style: italic;
-		min-width: 13em;
-		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
-		text-align: left;
-		margin-top: -1.25em;
-		margin-left: -1px;
-		list-style: none;
-	}
+.dropotron a, .dropotron span {
+    color: #333333; /* Texto oscuro para mejor contraste */
+    text-decoration: none;
+    transition: color .3s ease; /* Transición suave para color */
+}
 
-		.dropotron a, .dropotron span {
-			color: #aaa;
-			text-decoration: none;
-			-moz-transition: color .25s ease-in-out;
-			-webkit-transition: color .25s ease-in-out;
-			-ms-transition: color .25s ease-in-out;
-			transition: color .25s ease-in-out;
-		}
+.dropotron li {
+    padding: 0.5em 0; /* Espacio superior e inferior en cada elemento */
+}
 
-		.dropotron li {
-			padding: 0.25em 0 0.25em 0;
-		}
+.dropotron li:hover > a, .dropotron li:hover > span {
+    color: #00796b; /* Color verde para el texto en hover */
+}
 
-			.dropotron li:hover > a, .dropotron li:hover > span {
-				color: #fff;
-			}
+.dropotron.level-0 {
+    margin-top: 2em;
+}
 
-		.dropotron.level-0 {
-			margin-top: 2em;
-		}
-
-			.dropotron.level-0:before {
-				content: '';
-				display: block;
-				position: absolute;
-				left: 50%;
-				margin-left: -10px;
-				top: -9px;
-				border-left: solid 10px transparent;
-				border-right: solid 10px transparent;
-				border-bottom: solid 10px #252122;
-				border-bottom-color: rgba(34, 30, 31, 0.98);
-			}
+.dropotron.level-0:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: -9px;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px #ffffff; /* Fondo blanco para el triángulo */
+}
 
 /* Banner */
 
