@@ -215,6 +215,59 @@ input, select, textarea {
 
 		}
 
+        #header img {
+            width: 100px; /* Cambia este valor según el tamaño deseado */
+            height: auto;
+        }
+
+        /* Mejora el diseño del formulario */
+        #form-container {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #form-container input[type="text"],
+        #form-container input[type="email"],
+        #form-container input[type="tel"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #form-container label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        #form-container p {
+            margin-bottom: 10px;
+        }
+
+        #form-container input[type="image"] {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background: #555;
+        }
+
 /* Row */
 
 	.row {
@@ -1452,7 +1505,6 @@ input, select, textarea {
 	form input[type=password],
 	form select,
 	form textarea {
-		-webkit-appearance: none;
 		display: block;
 		border: 0;
 		padding: 0.75em 1em;
@@ -1608,7 +1660,6 @@ input, select, textarea {
 	input[type="reset"],
 	button,
 	.button {
-		-webkit-appearance: none;
 		display: inline-block;
 		text-decoration: none;
 		cursor: pointer;
