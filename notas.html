@@ -72,15 +72,15 @@
                                         <td id="nota1-1">4.6</td>
                                         <td id="nota1-2">4.1</td>
                                         <td id="nota1-3">4.6</td>
-                                        <td><input type="number" id="nota1-4" step="0.1" min="1" max="5" onchange="calcularPromedio('Julian', '1')"></td>
+                                        <td><input type="number" id="nota1-4" step="0.1" min="1" max="5" onchange="calcularPromedio('Julian David Moscoso', '1')"></td>
                                         <td id="promedio1">-</td>
                                     </tr>
                                     <tr>
-                                        <td>Sofia</td>
+                                        <td>Sofia Rincón Franco</td>
                                         <td id="nota2-1">4.5</td>
                                         <td id="nota2-2">4.1</td>
                                         <td id="nota2-3">4.6</td>
-                                        <td><input type="number" id="nota2-4" step="0.1" min="1" max="5" onchange="calcularPromedio('Sofia', '2')"></td>
+                                        <td><input type="number" id="nota2-4" step="0.1" min="1" max="5" onchange="calcularPromedio('Sofia Rincón Franco', '2')"></td>
                                         <td id="promedio2">-</td>
                                     </tr>
                                 </tbody>
@@ -112,6 +112,13 @@
 
     </div>
 
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
     <script>
         function calcularPromedio(nombre, id) {
             let nota1 = parseFloat(document.getElementById(`nota${id}-1`).innerText);
@@ -121,7 +128,17 @@
 
             let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
 
-            document.getElementById(`promedio${id}`).innerText = promedio.toFixed(2);
+            document.getElementById(`promedio${id}`).innerText = promedio.toFixed(1);
+            document.getElementById('resultados-estudiantes').innerHTML = `
+                <p><strong>Las notas del estudiante ${nombre} son:</strong><br>
+                Nota 1: ${nota1}<br>
+                Nota 2: ${nota2}<br>
+                Nota 3: ${nota3}<br>
+                Nota 4: ${nota4}<br>
+                Final: ${promedio.toFixed(1)}<br>
+                El estudiante en promedio sacó ${promedio.toFixed(1)}, por ende ${promedio >= 3 ? 'gana' : 'pierde'} el curso.</p>
+            `;
+			document.getElementById(`promedio${id}`).innerText = promedio.toFixed(2);
             document.getElementById('resultados-estudiantes').innerHTML = `
                 <p><strong>Las notas del estudiante ${nombre} son:</strong><br>
                 Nota 1: ${nota1}<br>
