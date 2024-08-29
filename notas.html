@@ -56,7 +56,7 @@
 									<h2>Formulario de Notas</h2>
 									<p>Ingrese la cuarta nota para calcular el promedio.</p>
 								</header>
-								<table id="grades-table">
+								<table id="tabla-notas">
 									<thead>
 										<tr>
 											<th>Estudiante</th>
@@ -69,24 +69,24 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td>Julian David Moscoso</td>
-											<td id="note1-1">4.6</td>
-											<td id="note1-2">4.1</td>
-											<td id="note1-3">4.6</td>
-											<td><input type="number" id="note1-4" step="0.1" min="1" max="5" placeholder="Ingresar nota aquí" onchange="updateTable()"></td>
-											<td id="avg1">-</td>
+											<td>Julian</td>
+											<td id="nota1-1">4.2</td>
+											<td id="nota1-2">3.8</td>
+											<td id="nota1-3">4.5</td>
+											<td><input type="number" id="nota1-4" step="0.1" min="1" max="5" placeholder="Ingresar nota aquí" onchange="actualizarTabla()"></td>
+											<td id="promedio1">-</td>
 										</tr>
 										<tr>
 											<td>Sofia</td>
-											<td id="note2-1">4.5</td>
-											<td id="note2-2">4.1</td>
-											<td id="note2-3">4.6</td>
-											<td><input type="number" id="note2-4" step="0.1" min="1" max="5" placeholder="Ingresar nota aquí" onchange="updateTable()"></td>
-											<td id="avg2">-</td>
+											<td id="nota2-1">3.9</td>
+											<td id="nota2-2">4.1</td>
+											<td id="nota2-3">4.7</td>
+											<td><input type="number" id="nota2-4" step="0.1" min="1" max="5" placeholder="Ingresar nota aquí" onchange="actualizarTabla()"></td>
+											<td id="promedio2">-</td>
 										</tr>
 									</tbody>
 								</table>
-								<div id="results"></div>
+								<div id="resultados"></div>
 							</article>
 						</div>
 						<div class="col-4 col-12-medium">
@@ -95,7 +95,7 @@
 								<header>
 									<h3>Resultados</h3>
 								</header>
-								<div id="student-results">
+								<div id="resultados-estudiantes">
 									<p>Los resultados aparecerán aquí.</p>
 								</div>
 							</section>
@@ -138,39 +138,39 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
-			function updateTable() {
+			function actualizarTabla() {
 				// Obtener los valores de las notas y calcular los promedios
-				let note1_1 = parseFloat(document.getElementById('note1-1').innerText);
-				let note1_2 = parseFloat(document.getElementById('note1-2').innerText);
-				let note1_3 = parseFloat(document.getElementById('note1-3').innerText);
-				let note1_4 = parseFloat(document.getElementById('note1-4').value) || 0; // Si no se ingresa, considerar 0
-				let avg1 = (note1_1 + note1_2 + note1_3 + note1_4) / 4;
-				document.getElementById('avg1').innerText = avg1.toFixed(2);
+				let nota1_1 = parseFloat(document.getElementById('nota1-1').innerText);
+				let nota1_2 = parseFloat(document.getElementById('nota1-2').innerText);
+				let nota1_3 = parseFloat(document.getElementById('nota1-3').innerText);
+				let nota1_4 = parseFloat(document.getElementById('nota1-4').value) || 0; // Si no se ingresa, considerar 0
+				let promedio1 = (nota1_1 + nota1_2 + nota1_3 + nota1_4) / 4;
+				document.getElementById('promedio1').innerText = promedio1.toFixed(2);
 	
-				let note2_1 = parseFloat(document.getElementById('note2-1').innerText);
-				let note2_2 = parseFloat(document.getElementById('note2-2').innerText);
-				let note2_3 = parseFloat(document.getElementById('note2-3').innerText);
-				let note2_4 = parseFloat(document.getElementById('note2-4').value) || 0; // Si no se ingresa, considerar 0
-				let avg2 = (note2_1 + note2_2 + note2_3 + note2_4) / 4;
-				document.getElementById('avg2').innerText = avg2.toFixed(2);
+				let nota2_1 = parseFloat(document.getElementById('nota2-1').innerText);
+				let nota2_2 = parseFloat(document.getElementById('nota2-2').innerText);
+				let nota2_3 = parseFloat(document.getElementById('nota2-3').innerText);
+				let nota2_4 = parseFloat(document.getElementById('nota2-4').value) || 0; // Si no se ingresa, considerar 0
+				let promedio2 = (nota2_1 + nota2_2 + nota2_3 + nota2_4) / 4;
+				document.getElementById('promedio2').innerText = promedio2.toFixed(2);
 	
 				// Mostrar el resultado en el área de resultados
-				let resultsDiv = document.getElementById('student-results');
-				resultsDiv.innerHTML = `
+				let resultadosDiv = document.getElementById('resultados-estudiantes');
+				resultadosDiv.innerHTML = `
 					<p><strong>Las notas del estudiante Julian son:</strong><br>
-					Nota 1: ${note1_1}<br>
-					Nota 2: ${note1_2}<br>
-					Nota 3: ${note1_3}<br>
-					Nota 4: ${note1_4}<br>
-					Final: ${avg1.toFixed(2)}<br>
-					El estudiante en promedio sacó ${avg1.toFixed(2)}, por ende ${avg1 >= 3 ? 'gana' : 'pierde'} el curso.</p>
+					Nota 1: ${nota1_1}<br>
+					Nota 2: ${nota1_2}<br>
+					Nota 3: ${nota1_3}<br>
+					Nota 4: ${nota1_4}<br>
+					Final: ${promedio1.toFixed(2)}<br>
+					El estudiante en promedio sacó ${promedio1.toFixed(2)}, por ende ${promedio1 >= 3 ? 'gana' : 'pierde'} el curso.</p>
 					<p><strong>Las notas del estudiante Sofia son:</strong><br>
-					Nota 1: ${note2_1}<br>
-					Nota 2: ${note2_2}<br>
-					Nota 3: ${note2_3}<br>
-					Nota 4: ${note2_4}<br>
-					Final: ${avg2.toFixed(2)}<br>
-					El estudiante en promedio sacó ${avg2.toFixed(2)}, por ende ${avg2 >= 3 ? 'gana' : 'pierde'} el curso.</p>
+					Nota 1: ${nota2_1}<br>
+					Nota 2: ${nota2_2}<br>
+					Nota 3: ${nota2_3}<br>
+					Nota 4: ${nota2_4}<br>
+					Final: ${promedio2.toFixed(2)}<br>
+					El estudiante en promedio sacó ${promedio2.toFixed(2)}, por ende ${promedio2 >= 3 ? 'gana' : 'pierde'} el curso.</p>
 				`;
 			}
 		</script>
