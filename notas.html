@@ -46,102 +46,92 @@
 			</section>
 	
 			<!-- Main -->
-			<section id="main">
-				<div class="container">
-					<div class="row">
-						<div class="col-8 col-12-medium">
-							<article class="box post">
-								<header>
-									<h2>Formulario de Notas</h2>
-									<p>Ingrese la cuarta nota para calcular el promedio.</p>
-								</header>
-								<table id="tabla-notas">
-									<thead>
-										<tr>
-											<th>Estudiante</th>
-											<th>Nota 1</th>
-											<th>Nota 2</th>
-											<th>Nota 3</th>
-											<th>Nota 4</th>
-											<th>Promedio</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Julian David Moscoso</td>
-											<td id="nota1-1">4.6</td>
-											<td id="nota1-2">4.1</td>
-											<td id="nota1-3">4.6</td>
-											<td><input type="number" id="nota1-4" step="0.1" min="1" max="5" onchange="calcularPromedio('Julian', '1')"></td>
-											<td id="promedio1">-</td>
-										</tr>
-										<tr>
-											<td>Sofia Rincón Franco</td>
-											<td id="nota2-1">4.5</td>
-											<td id="nota2-2">4.1</td>
-											<td id="nota2-3">4.6</td>
-											<td><input type="number" id="nota2-4" step="0.1" min="1" max="5" onchange="calcularPromedio('Sofia', '2')"></td>
-											<td id="promedio2">-</td>
-										</tr>
-									</tbody>
-								</table>
-								<div id="resultados"></div>
-							</article>
-						</div>
-						<div class="col-4 col-12-medium">
-							<section class="box">
-								<header>
-									<h3>Resultados</h3>
-								</header>
-								<div id="resultados-estudiantes">
-									<p>Los resultados aparecerán aquí.</p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</div>
-			</section>
-	
-			<section id="footer">
-				<div class="container">
-					<div class="row">
-						<!-- Más secciones del pie -->
-					</div>
-				</div>
-			</section>
-	
-		</div>
-	
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script>
-			function calcularPromedio(nombre, id) {
-				// Obtener las tres primeras notas desde la tabla
-				let nota1 = parseFloat(document.getElementById(`nota${id}-1`).innerText);
-				let nota2 = parseFloat(document.getElementById(`nota${id}-2`).innerText);
-				let nota3 = parseFloat(document.getElementById(`nota${id}-3`).innerText);
-				let nota4 = parseFloat(document.getElementById(`nota${id}-4`).value) || 0;
-	
-				// Calcular el promedio de las cuatro notas
-				let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
-	
-				// Actualizar la tabla y mostrar resultados
-				document.getElementById(`promedio${id}`).innerText = promedio.toFixed(2);
-				document.getElementById('resultados-estudiantes').innerHTML = `
-					<p><strong>Las notas del estudiante ${nombre} son:</strong><br>
-					Nota 1: ${nota1}<br>
-					Nota 2: ${nota2}<br>
-					Nota 3: ${nota3}<br>
-					Nota 4: ${nota4}<br>
-					Final: ${promedio.toFixed(2)}<br>
-					El estudiante en promedio sacó ${promedio.toFixed(2)}, por ende ${promedio >= 3 ? 'gana' : 'pierde'} el curso.</p>
-				`;
-			}
-		</script>
-	</body>
-	</html>
+        <section id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 col-12-medium">
+                        <article class="box post">
+                            <header>
+                                <h2>Formulario de Notas</h2>
+                                <p>Ingrese la cuarta nota para calcular el promedio.</p>
+                            </header>
+                            <table id="tabla-notas">
+                                <thead>
+                                    <tr>
+                                        <th>Estudiante</th>
+                                        <th>Nota 1</th>
+                                        <th>Nota 2</th>
+                                        <th>Nota 3</th>
+                                        <th>Nota 4</th>
+                                        <th>Promedio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Julian David Moscoso</td>
+                                        <td id="nota1-1">4.6</td>
+                                        <td id="nota1-2">4.1</td>
+                                        <td id="nota1-3">4.6</td>
+                                        <td><input type="number" id="nota1-4" step="0.1" min="1" max="5" onchange="calcularPromedio('Julian', '1')"></td>
+                                        <td id="promedio1">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sofia</td>
+                                        <td id="nota2-1">4.5</td>
+                                        <td id="nota2-2">4.1</td>
+                                        <td id="nota2-3">4.6</td>
+                                        <td><input type="number" id="nota2-4" step="0.1" min="1" max="5" onchange="calcularPromedio('Sofia', '2')"></td>
+                                        <td id="promedio2">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div id="resultados"></div>
+                        </article>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <section class="box">
+                            <header>
+                                <h3>Resultados</h3>
+                            </header>
+                            <div id="resultados-estudiantes">
+                                <p>Los resultados aparecerán aquí.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+  
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function calcularPromedio(nombre, id) {
+            let nota1 = parseFloat(document.getElementById(`nota${id}-1`).innerText);
+            let nota2 = parseFloat(document.getElementById(`nota${id}-2`).innerText);
+            let nota3 = parseFloat(document.getElementById(`nota${id}-3`).innerText);
+            let nota4 = parseFloat(document.getElementById(`nota${id}-4`).value) || 0;
+
+            let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
+
+            document.getElementById(`promedio${id}`).innerText = promedio.toFixed(2);
+            document.getElementById('resultados-estudiantes').innerHTML = `
+                <p><strong>Las notas del estudiante ${nombre} son:</strong><br>
+                Nota 1: ${nota1}<br>
+                Nota 2: ${nota2}<br>
+                Nota 3: ${nota3}<br>
+                Nota 4: ${nota4}<br>
+                Final: ${promedio.toFixed(2)}<br>
+                El estudiante en promedio sacó ${promedio.toFixed(2)}, por ende ${promedio >= 3 ? 'gana' : 'pierde'} el curso.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
