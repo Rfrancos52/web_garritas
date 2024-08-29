@@ -129,7 +129,7 @@
             let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
 
             document.getElementById(`promedio${id}`).innerText = promedio.toFixed(1);
-            document.getElementById('resultados-estudiantes').innerHTML = `
+            let resultado = `
                 <p><strong>Las notas del estudiante ${nombre} son:</strong><br>
                 Nota 1: ${nota1}<br>
                 Nota 2: ${nota2}<br>
@@ -138,16 +138,9 @@
                 Final: ${promedio.toFixed(1)}<br>
                 El estudiante en promedio sacó ${promedio.toFixed(1)}, por ende ${promedio >= 3 ? 'gana' : 'pierde'} el curso.</p>
             `;
-			document.getElementById(`promedio${id}`).innerText = promedio.toFixed(2);
-            document.getElementById('resultados-estudiantes').innerHTML = `
-                <p><strong>Las notas del estudiante ${nombre} son:</strong><br>
-                Nota 1: ${nota1}<br>
-                Nota 2: ${nota2}<br>
-                Nota 3: ${nota3}<br>
-                Nota 4: ${nota4}<br>
-                Final: ${promedio.toFixed(2)}<br>
-                El estudiante en promedio sacó ${promedio.toFixed(2)}, por ende ${promedio >= 3 ? 'gana' : 'pierde'} el curso.</p>
-            `;
+
+            let resultadosDiv = document.getElementById('resultados-estudiantes');
+            resultadosDiv.innerHTML += resultado;
         }
     </script>
 </body>
