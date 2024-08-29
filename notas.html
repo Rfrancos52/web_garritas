@@ -70,18 +70,18 @@
 									<tbody>
 										<tr>
 											<td>Juan Pérez</td>
-											<td id="note1-1">7</td>
-											<td id="note1-2">8</td>
-											<td id="note1-3">9</td>
-											<td><input type="number" id="note1-4" placeholder="Ingresar nota aquí" onchange="updateTable()"></td>
+											<td id="note1-1">7.2</td>
+											<td id="note1-2">8.5</td>
+											<td id="note1-3">9.1</td>
+											<td><input type="number" id="note1-4" step="0.1" min="1" max="5" placeholder="Ingresar nota aquí" onchange="updateTable()"></td>
 											<td id="avg1">-</td>
 										</tr>
 										<tr>
 											<td>Ana Gómez</td>
-											<td id="note2-1">6</td>
-											<td id="note2-2">7</td>
-											<td id="note2-3">8</td>
-											<td><input type="number" id="note2-4" placeholder="Ingresar nota aquí" onchange="updateTable()"></td>
+											<td id="note2-1">6.4</td>
+											<td id="note2-2">7.7</td>
+											<td id="note2-3">8.9</td>
+											<td><input type="number" id="note2-4" step="0.1" min="1" max="5" placeholder="Ingresar nota aquí" onchange="updateTable()"></td>
 											<td id="avg2">-</td>
 										</tr>
 									</tbody>
@@ -143,14 +143,14 @@
 				let note1_1 = parseFloat(document.getElementById('note1-1').innerText);
 				let note1_2 = parseFloat(document.getElementById('note1-2').innerText);
 				let note1_3 = parseFloat(document.getElementById('note1-3').innerText);
-				let note1_4 = parseFloat(document.getElementById('note1-4').value);
+				let note1_4 = parseFloat(document.getElementById('note1-4').value) || 0; // Si no se ingresa, considerar 0
 				let avg1 = (note1_1 + note1_2 + note1_3 + note1_4) / 4;
 				document.getElementById('avg1').innerText = avg1.toFixed(2);
 	
 				let note2_1 = parseFloat(document.getElementById('note2-1').innerText);
 				let note2_2 = parseFloat(document.getElementById('note2-2').innerText);
 				let note2_3 = parseFloat(document.getElementById('note2-3').innerText);
-				let note2_4 = parseFloat(document.getElementById('note2-4').value);
+				let note2_4 = parseFloat(document.getElementById('note2-4').value) || 0; // Si no se ingresa, considerar 0
 				let avg2 = (note2_1 + note2_2 + note2_3 + note2_4) / 4;
 				document.getElementById('avg2').innerText = avg2.toFixed(2);
 	
